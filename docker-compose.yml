@@ -1,0 +1,13 @@
+version: '3.9'
+
+services:
+  jupyter:
+    container_name: jupyter
+    image: jupyter/datascience-notebook:2023-08-19
+    ports:
+      - 10000:8888
+    volumes:
+      - ${PWD}:/home/steven/work
+
+# docker exec -it jupyter sh
+# jupyter server list
